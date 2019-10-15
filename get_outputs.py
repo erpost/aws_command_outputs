@@ -31,3 +31,4 @@ for url in urls:
     with open(file_path, 'w') as out_file:
         for line in str(result):
             out_file.write(line)
+
