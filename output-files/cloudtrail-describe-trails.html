@@ -1,0 +1,68 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>trailList -&gt; (list)</p>
+<blockquote>
+<div><p>The list of trail objects. Trail objects with string values are only returned if values for the objects exist in a trail's configuration. For example, <tt class="docutils literal"><span class="pre">SNSTopicName</span></tt> and <tt class="docutils literal"><span class="pre">SNSTopicARN</span></tt> are only returned in results if a trail is configured to send SNS notifications. Similarly, <tt class="docutils literal"><span class="pre">KMSKeyId</span></tt> only appears in results if a trail's log files are encrypted with AWS KMS-managed keys.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>The settings for a trail.</p>
+<p>Name -&gt; (string)</p>
+<blockquote>
+<div>Name of the trail set by calling  CreateTrail . The maximum length is 128 characters.</div></blockquote>
+<p>S3BucketName -&gt; (string)</p>
+<blockquote>
+<div>Name of the Amazon S3 bucket into which CloudTrail delivers your trail files. See <a class="reference external" href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon S3 Bucket Naming Requirements</a> .</div></blockquote>
+<p>S3KeyPrefix -&gt; (string)</p>
+<blockquote>
+<div>Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your CloudTrail Log Files</a> .The maximum length is 200 characters.</div></blockquote>
+<p>SnsTopicName -&gt; (string)</p>
+<blockquote>
+<div>This field is no longer in use. Use SnsTopicARN.</div></blockquote>
+<p>SnsTopicARN -&gt; (string)</p>
+<blockquote>
+<div><p>Specifies the ARN of the Amazon SNS topic that CloudTrail uses to send notifications when log files are delivered. The format of a topic ARN is:</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">arn:aws:sns:us-east-2:123456789012:MyTopic</span></tt></div></blockquote>
+</div></blockquote>
+<p>IncludeGlobalServiceEvents -&gt; (boolean)</p>
+<blockquote>
+<div>Set to <strong>True</strong> to include AWS API calls from AWS global services such as IAM. Otherwise, <strong>False</strong> .</div></blockquote>
+<p>IsMultiRegionTrail -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether the trail exists only in one region or exists in all regions.</div></blockquote>
+<p>HomeRegion -&gt; (string)</p>
+<blockquote>
+<div>The region in which the trail was created.</div></blockquote>
+<p>TrailARN -&gt; (string)</p>
+<blockquote>
+<div><p>Specifies the ARN of the trail. The format of a trail ARN is:</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</span></tt></div></blockquote>
+</div></blockquote>
+<p>LogFileValidationEnabled -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether log file validation is enabled.</div></blockquote>
+<p>CloudWatchLogsLogGroupArn -&gt; (string)</p>
+<blockquote>
+<div>Specifies an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered.</div></blockquote>
+<p>CloudWatchLogsRoleArn -&gt; (string)</p>
+<blockquote>
+<div>Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.</div></blockquote>
+<p>KmsKeyId -&gt; (string)</p>
+<blockquote>
+<div><p>Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified ARN to a KMS key in the format:</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</span></tt></div></blockquote>
+</div></blockquote>
+<p>HasCustomEventSelectors -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies if the trail has custom event selectors.</div></blockquote>
+<p>HasInsightSelectors -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether a trail has insight types specified in an <tt class="docutils literal"><span class="pre">InsightSelector</span></tt> list.</div></blockquote>
+<p>IsOrganizationTrail -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether the trail is an organization trail.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>

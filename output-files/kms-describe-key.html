@@ -1,0 +1,69 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>KeyMetadata -&gt; (structure)</p>
+<blockquote>
+<div><p>Metadata associated with the key.</p>
+<p>AWSAccountId -&gt; (string)</p>
+<blockquote>
+<div>The twelve-digit account ID of the AWS account that owns the CMK.</div></blockquote>
+<p>KeyId -&gt; (string)</p>
+<blockquote>
+<div>The globally unique identifier for the CMK.</div></blockquote>
+<p>Arn -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) of the CMK. For examples, see <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key Management Service (AWS KMS)</a> in the Example ARNs section of the <em>AWS General Reference</em> .</div></blockquote>
+<p>CreationDate -&gt; (timestamp)</p>
+<blockquote>
+<div>The date and time when the CMK was created.</div></blockquote>
+<p>Enabled -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether the CMK is enabled. When <tt class="docutils literal"><span class="pre">KeyState</span></tt> is <tt class="docutils literal"><span class="pre">Enabled</span></tt> this value is true, otherwise it is false.</div></blockquote>
+<p>Description -&gt; (string)</p>
+<blockquote>
+<div>The description of the CMK.</div></blockquote>
+<p>KeyUsage -&gt; (string)</p>
+<blockquote>
+<div>The cryptographic operations for which you can use the CMK.</div></blockquote>
+<p>KeyState -&gt; (string)</p>
+<blockquote>
+<div><p>The state of the CMK.</p>
+<p>For more information about how key state affects the use of a CMK, see <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects the Use of a Customer Master Key</a> in the <em>AWS Key Management Service Developer Guide</em> .</p>
+</div></blockquote>
+<p>DeletionDate -&gt; (timestamp)</p>
+<blockquote>
+<div>The date and time after which AWS KMS deletes the CMK. This value is present only when <tt class="docutils literal"><span class="pre">KeyState</span></tt> is <tt class="docutils literal"><span class="pre">PendingDeletion</span></tt> .</div></blockquote>
+<p>ValidTo -&gt; (timestamp)</p>
+<blockquote>
+<div>The time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. This value is present only for CMKs whose <tt class="docutils literal"><span class="pre">Origin</span></tt> is <tt class="docutils literal"><span class="pre">EXTERNAL</span></tt> and whose <tt class="docutils literal"><span class="pre">ExpirationModel</span></tt> is <tt class="docutils literal"><span class="pre">KEY_MATERIAL_EXPIRES</span></tt> , otherwise this value is omitted.</div></blockquote>
+<p>Origin -&gt; (string)</p>
+<blockquote>
+<div>The source of the CMK's key material. When this value is <tt class="docutils literal"><span class="pre">AWS_KMS</span></tt> , AWS KMS created the key material. When this value is <tt class="docutils literal"><span class="pre">EXTERNAL</span></tt> , the key material was imported from your existing key management infrastructure or the CMK lacks key material. When this value is <tt class="docutils literal"><span class="pre">AWS_CLOUDHSM</span></tt> , the key material was created in the AWS CloudHSM cluster associated with a custom key store.</div></blockquote>
+<p>CustomKeyStoreId -&gt; (string)</p>
+<blockquote>
+<div>A unique identifier for the <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a> that contains the CMK. This value is present only when the CMK is created in a custom key store.</div></blockquote>
+<p>CloudHsmClusterId -&gt; (string)</p>
+<blockquote>
+<div>The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a CMK in a <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a> , AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value is present only when the CMK is created in a custom key store.</div></blockquote>
+<p>ExpirationModel -&gt; (string)</p>
+<blockquote>
+<div>Specifies whether the CMK's key material expires. This value is present only when <tt class="docutils literal"><span class="pre">Origin</span></tt> is <tt class="docutils literal"><span class="pre">EXTERNAL</span></tt> , otherwise this value is omitted.</div></blockquote>
+<p>KeyManager -&gt; (string)</p>
+<blockquote>
+<div>The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information about the difference, see <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a> in the <em>AWS Key Management Service Developer Guide</em> .</div></blockquote>
+<p>CustomerMasterKeySpec -&gt; (string)</p>
+<blockquote>
+<div>Describes the type of key material in the CMK.</div></blockquote>
+<p>EncryptionAlgorithms -&gt; (list)</p>
+<blockquote>
+<div><p>A list of encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within AWS KMS.</p>
+<p>This field appears only when the <tt class="docutils literal"><span class="pre">KeyUsage</span></tt> of the CMK is <tt class="docutils literal"><span class="pre">ENCRYPT_DECRYPT</span></tt> .</p>
+<p>(string)</p>
+</div></blockquote>
+<p>SigningAlgorithms -&gt; (list)</p>
+<blockquote>
+<div><p>A list of signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS KMS.</p>
+<p>This field appears only when the <tt class="docutils literal"><span class="pre">KeyUsage</span></tt> of the CMK is <tt class="docutils literal"><span class="pre">SIGN_VERIFY</span></tt> .</p>
+<p>(string)</p>
+</div></blockquote>
+</div></blockquote>
+</div>

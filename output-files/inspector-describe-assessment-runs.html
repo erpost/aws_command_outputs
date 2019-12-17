@@ -1,0 +1,122 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>assessmentRuns -&gt; (list)</p>
+<blockquote>
+<div><p>Information about the assessment run.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>A snapshot of an Amazon Inspector assessment run that contains the findings of the assessment run .</p>
+<p>Used as the response element in the  DescribeAssessmentRuns action.</p>
+<p>arn -&gt; (string)</p>
+<blockquote>
+<div>The ARN of the assessment run.</div></blockquote>
+<p>name -&gt; (string)</p>
+<blockquote>
+<div>The auto-generated name for the assessment run.</div></blockquote>
+<p>assessmentTemplateArn -&gt; (string)</p>
+<blockquote>
+<div>The ARN of the assessment template that is associated with the assessment run.</div></blockquote>
+<p>state -&gt; (string)</p>
+<blockquote>
+<div>The state of the assessment run.</div></blockquote>
+<p>durationInSeconds -&gt; (integer)</p>
+<blockquote>
+<div>The duration of the assessment run.</div></blockquote>
+<p>rulesPackageArns -&gt; (list)</p>
+<blockquote>
+<div><p>The rules packages selected for the assessment run.</p>
+<p>(string)</p>
+</div></blockquote>
+<p>userAttributesForFindings -&gt; (list)</p>
+<blockquote>
+<div><p>The user-defined attributes that are assigned to every generated finding.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>This data type is used as a request parameter in the  AddAttributesToFindings and  CreateAssessmentTemplate actions.</p>
+<p>key -&gt; (string)</p>
+<blockquote>
+<div>The attribute key.</div></blockquote>
+<p>value -&gt; (string)</p>
+<blockquote>
+<div>The value assigned to the attribute key.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>createdAt -&gt; (timestamp)</p>
+<blockquote>
+<div>The time when  StartAssessmentRun was called.</div></blockquote>
+<p>startedAt -&gt; (timestamp)</p>
+<blockquote>
+<div>The time when  StartAssessmentRun was called.</div></blockquote>
+<p>completedAt -&gt; (timestamp)</p>
+<blockquote>
+<div>The assessment run completion time that corresponds to the rules packages evaluation completion time or failure.</div></blockquote>
+<p>stateChangedAt -&gt; (timestamp)</p>
+<blockquote>
+<div>The last time when the assessment run's state changed.</div></blockquote>
+<p>dataCollected -&gt; (boolean)</p>
+<blockquote>
+<div>A Boolean value (true or false) that specifies whether the process of collecting data from the agents is completed.</div></blockquote>
+<p>stateChanges -&gt; (list)</p>
+<blockquote>
+<div><p>A list of the assessment run state changes.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Used as one of the elements of the  AssessmentRun data type.</p>
+<p>stateChangedAt -&gt; (timestamp)</p>
+<blockquote>
+<div>The last time the assessment run state changed.</div></blockquote>
+<p>state -&gt; (string)</p>
+<blockquote>
+<div>The assessment run state.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>notifications -&gt; (list)</p>
+<blockquote>
+<div><p>A list of notifications for the event subscriptions. A notification about a particular generated finding is added to this list only once.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Used as one of the elements of the  AssessmentRun data type.</p>
+<p>date -&gt; (timestamp)</p>
+<blockquote>
+<div>The date of the notification.</div></blockquote>
+<p>event -&gt; (string)</p>
+<blockquote>
+<div>The event for which a notification is sent.</div></blockquote>
+<p>message -&gt; (string)</p>
+<blockquote>
+<div>The message included in the notification.</div></blockquote>
+<p>error -&gt; (boolean)</p>
+<blockquote>
+<div>The Boolean value that specifies whether the notification represents an error.</div></blockquote>
+<p>snsTopicArn -&gt; (string)</p>
+<blockquote>
+<div>The SNS topic to which the SNS notification is sent.</div></blockquote>
+<p>snsPublishStatusCode -&gt; (string)</p>
+<blockquote>
+<div>The status code of the SNS notification.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>findingCounts -&gt; (map)</p>
+<blockquote>
+<div><p>Provides a total count of generated findings per severity.</p>
+<p>key -&gt; (string)</p>
+<p>value -&gt; (integer)</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>failedItems -&gt; (map)</p>
+<blockquote>
+<div><p>Assessment run details that cannot be described. An error code is provided for each failed item.</p>
+<p>key -&gt; (string)</p>
+<p>value -&gt; (structure)</p>
+<blockquote>
+<div><p>Includes details about the failed items.</p>
+<p>failureCode -&gt; (string)</p>
+<blockquote>
+<div>The status code of a failed item.</div></blockquote>
+<p>retryable -&gt; (boolean)</p>
+<blockquote>
+<div>Indicates whether you can immediately retry a request for this item for a specified resource.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>

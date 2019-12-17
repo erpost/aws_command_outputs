@@ -1,0 +1,142 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>NextMarker -&gt; (string)</p>
+<blockquote>
+<div>The pagination token that's included if more results are available.</div></blockquote>
+<p>Functions -&gt; (list)</p>
+<blockquote>
+<div><p>A list of Lambda functions.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Details about a function's configuration.</p>
+<p>FunctionName -&gt; (string)</p>
+<blockquote>
+<div>The name of the function.</div></blockquote>
+<p>FunctionArn -&gt; (string)</p>
+<blockquote>
+<div>The function's Amazon Resource Name (ARN).</div></blockquote>
+<p>Runtime -&gt; (string)</p>
+<blockquote>
+<div>The runtime environment for the Lambda function.</div></blockquote>
+<p>Role -&gt; (string)</p>
+<blockquote>
+<div>The function's execution role.</div></blockquote>
+<p>Handler -&gt; (string)</p>
+<blockquote>
+<div>The function that Lambda calls to begin executing your function.</div></blockquote>
+<p>CodeSize -&gt; (long)</p>
+<blockquote>
+<div>The size of the function's deployment package, in bytes.</div></blockquote>
+<p>Description -&gt; (string)</p>
+<blockquote>
+<div>The function's description.</div></blockquote>
+<p>Timeout -&gt; (integer)</p>
+<blockquote>
+<div>The amount of time that Lambda allows a function to run before stopping it.</div></blockquote>
+<p>MemorySize -&gt; (integer)</p>
+<blockquote>
+<div>The memory that's allocated to the function.</div></blockquote>
+<p>LastModified -&gt; (string)</p>
+<blockquote>
+<div>The date and time that the function was last updated, in <a class="reference external" href="https://www.w3.org/TR/NOTE-datetime">ISO-8601 format</a> (YYYY-MM-DDThh:mm:ss.sTZD).</div></blockquote>
+<p>CodeSha256 -&gt; (string)</p>
+<blockquote>
+<div>The SHA256 hash of the function's deployment package.</div></blockquote>
+<p>Version -&gt; (string)</p>
+<blockquote>
+<div>The version of the Lambda function.</div></blockquote>
+<p>VpcConfig -&gt; (structure)</p>
+<blockquote>
+<div><p>The function's networking configuration.</p>
+<p>SubnetIds -&gt; (list)</p>
+<blockquote>
+<div><p>A list of VPC subnet IDs.</p>
+<p>(string)</p>
+</div></blockquote>
+<p>SecurityGroupIds -&gt; (list)</p>
+<blockquote>
+<div><p>A list of VPC security groups IDs.</p>
+<p>(string)</p>
+</div></blockquote>
+<p>VpcId -&gt; (string)</p>
+<blockquote>
+<div>The ID of the VPC.</div></blockquote>
+</div></blockquote>
+<p>DeadLetterConfig -&gt; (structure)</p>
+<blockquote>
+<div><p>The function's dead letter queue.</p>
+<p>TargetArn -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.</div></blockquote>
+</div></blockquote>
+<p>Environment -&gt; (structure)</p>
+<blockquote>
+<div><p>The function's environment variables.</p>
+<p>Variables -&gt; (map)</p>
+<blockquote>
+<div><p>Environment variable key-value pairs.</p>
+<p>key -&gt; (string)</p>
+<p>value -&gt; (string)</p>
+</div></blockquote>
+<p>Error -&gt; (structure)</p>
+<blockquote>
+<div><p>Error messages for environment variables that couldn't be applied.</p>
+<p>ErrorCode -&gt; (string)</p>
+<blockquote>
+<div>The error code.</div></blockquote>
+<p>Message -&gt; (string)</p>
+<blockquote>
+<div>The error message.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>KMSKeyArn -&gt; (string)</p>
+<blockquote>
+<div>The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've configured a customer managed CMK.</div></blockquote>
+<p>TracingConfig -&gt; (structure)</p>
+<blockquote>
+<div><p>The function's AWS X-Ray tracing configuration.</p>
+<p>Mode -&gt; (string)</p>
+<blockquote>
+<div>The tracing mode.</div></blockquote>
+</div></blockquote>
+<p>MasterArn -&gt; (string)</p>
+<blockquote>
+<div>For <a class="reference external" href="mailto:Lambda%40Edge">Lambda<span>@</span>Edge</a> functions, the ARN of the master function.</div></blockquote>
+<p>RevisionId -&gt; (string)</p>
+<blockquote>
+<div>The latest updated revision of the function or alias.</div></blockquote>
+<p>Layers -&gt; (list)</p>
+<blockquote>
+<div><p>The function's <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a> .</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>An <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a> .</p>
+<p>Arn -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) of the function layer.</div></blockquote>
+<p>CodeSize -&gt; (long)</p>
+<blockquote>
+<div>The size of the layer archive in bytes.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>State -&gt; (string)</p>
+<blockquote>
+<div>The current state of the function. When the state is <tt class="docutils literal"><span class="pre">Inactive</span></tt> , you can reactivate the function by invoking it.</div></blockquote>
+<p>StateReason -&gt; (string)</p>
+<blockquote>
+<div>The reason for the function's current state.</div></blockquote>
+<p>StateReasonCode -&gt; (string)</p>
+<blockquote>
+<div>The reason code for the function's current state. When the code is <tt class="docutils literal"><span class="pre">Creating</span></tt> , you can't invoke or modify the function.</div></blockquote>
+<p>LastUpdateStatus -&gt; (string)</p>
+<blockquote>
+<div>The status of the last update that was performed on the function.</div></blockquote>
+<p>LastUpdateStatusReason -&gt; (string)</p>
+<blockquote>
+<div>The reason for the last update that was performed on the function.</div></blockquote>
+<p>LastUpdateStatusReasonCode -&gt; (string)</p>
+<blockquote>
+<div>The reason code for the last update that was performed on the function.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>

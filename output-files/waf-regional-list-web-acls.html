@@ -1,0 +1,23 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>NextMarker -&gt; (string)</p>
+<blockquote>
+<div>If you have more <tt class="docutils literal"><span class="pre">WebACL</span></tt> objects than the number that you specified for <tt class="docutils literal"><span class="pre">Limit</span></tt> in the request, the response includes a <tt class="docutils literal"><span class="pre">NextMarker</span></tt> value. To list more <tt class="docutils literal"><span class="pre">WebACL</span></tt> objects, submit another <tt class="docutils literal"><span class="pre">ListWebACLs</span></tt> request, and specify the <tt class="docutils literal"><span class="pre">NextMarker</span></tt> value from the response in the <tt class="docutils literal"><span class="pre">NextMarker</span></tt> value in the next request.</div></blockquote>
+<p>WebACLs -&gt; (list)</p>
+<blockquote>
+<div><p>An array of  WebACLSummary objects.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Contains the identifier and the name or description of the  WebACL .</p>
+<p>WebACLId -&gt; (string)</p>
+<blockquote>
+<div><p>A unique identifier for a <tt class="docutils literal"><span class="pre">WebACL</span></tt> . You use <tt class="docutils literal"><span class="pre">WebACLId</span></tt> to get information about a <tt class="docutils literal"><span class="pre">WebACL</span></tt> (see  GetWebACL ), update a <tt class="docutils literal"><span class="pre">WebACL</span></tt> (see  UpdateWebACL ), and delete a <tt class="docutils literal"><span class="pre">WebACL</span></tt> from AWS WAF (see  DeleteWebACL ).</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">WebACLId</span></tt> is returned by  CreateWebACL and by  ListWebACLs .</div></blockquote>
+</div></blockquote>
+<p>Name -&gt; (string)</p>
+<blockquote>
+<div>A friendly name or description of the  WebACL . You can't change the name of a <tt class="docutils literal"><span class="pre">WebACL</span></tt> after you create it.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>

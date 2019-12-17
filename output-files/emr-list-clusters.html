@@ -1,0 +1,59 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>Clusters -&gt; (list)</p>
+<blockquote>
+<div><p>The list of clusters for the account based on the given filters.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>The summary description of the cluster.</p>
+<p>Id -&gt; (string)</p>
+<blockquote>
+<div>The unique identifier for the cluster.</div></blockquote>
+<p>Name -&gt; (string)</p>
+<blockquote>
+<div>The name of the cluster.</div></blockquote>
+<p>Status -&gt; (structure)</p>
+<blockquote>
+<div><p>The details about the current status of the cluster.</p>
+<p>State -&gt; (string)</p>
+<blockquote>
+<div>The current state of the cluster.</div></blockquote>
+<p>StateChangeReason -&gt; (structure)</p>
+<blockquote>
+<div><p>The reason for the cluster status change.</p>
+<p>Code -&gt; (string)</p>
+<blockquote>
+<div>The programmatic code for the state change reason.</div></blockquote>
+<p>Message -&gt; (string)</p>
+<blockquote>
+<div>The descriptive message for the state change reason.</div></blockquote>
+</div></blockquote>
+<p>Timeline -&gt; (structure)</p>
+<blockquote>
+<div><p>A timeline that represents the status of a cluster over the lifetime of the cluster.</p>
+<p>CreationDateTime -&gt; (timestamp)</p>
+<blockquote>
+<div>The creation date and time of the cluster.</div></blockquote>
+<p>ReadyDateTime -&gt; (timestamp)</p>
+<blockquote>
+<div>The date and time when the cluster was ready to execute steps.</div></blockquote>
+<p>EndDateTime -&gt; (timestamp)</p>
+<blockquote>
+<div>The date and time when the cluster was terminated.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>NormalizedInstanceHours -&gt; (integer)</p>
+<blockquote>
+<div>An approximation of the cost of the cluster, represented in m1.small/hours. This value is incremented one time for every hour an m1.small instance runs. Larger instances are weighted more, so an EC2 instance that is roughly four times more expensive would result in the normalized instance hours being incremented by four. This result is only an approximation and does not reflect the actual billing rate.</div></blockquote>
+<p>ClusterArn -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name of the cluster.</div></blockquote>
+<p>OutpostArn -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) of the Outpost where the cluster is launched.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Marker -&gt; (string)</p>
+<blockquote>
+<div>The pagination token that indicates the next set of results to retrieve.</div></blockquote>
+</div>

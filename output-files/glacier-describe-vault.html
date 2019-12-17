@@ -1,0 +1,21 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>VaultARN -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) of the vault.</div></blockquote>
+<p>VaultName -&gt; (string)</p>
+<blockquote>
+<div>The name of the vault.</div></blockquote>
+<p>CreationDate -&gt; (string)</p>
+<blockquote>
+<div>The Universal Coordinated Time (UTC) date when the vault was created. This value should be a string in the ISO 8601 date format, for example <tt class="docutils literal"><span class="pre">2012-03-20T17:03:43.221Z</span></tt> .</div></blockquote>
+<p>LastInventoryDate -&gt; (string)</p>
+<blockquote>
+<div>The Universal Coordinated Time (UTC) date when Amazon S3 Glacier completed the last vault inventory. This value should be a string in the ISO 8601 date format, for example <tt class="docutils literal"><span class="pre">2012-03-20T17:03:43.221Z</span></tt> .</div></blockquote>
+<p>NumberOfArchives -&gt; (long)</p>
+<blockquote>
+<div>The number of archives in the vault as of the last inventory date. This field will return <tt class="docutils literal"><span class="pre">null</span></tt> if an inventory has not yet run on the vault, for example if you just created the vault.</div></blockquote>
+<p>SizeInBytes -&gt; (long)</p>
+<blockquote>
+<div>Total size, in bytes, of the archives in the vault as of the last inventory date. This field will return null if an inventory has not yet run on the vault, for example if you just created the vault.</div></blockquote>
+</div>

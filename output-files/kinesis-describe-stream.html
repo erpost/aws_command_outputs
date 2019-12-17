@@ -1,0 +1,113 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>StreamDescription -&gt; (structure)</p>
+<blockquote>
+<div><p>The current status of the stream, the stream Amazon Resource Name (ARN), an array of shard objects that comprise the stream, and whether there are more shards available.</p>
+<p>StreamName -&gt; (string)</p>
+<blockquote>
+<div>The name of the stream being described.</div></blockquote>
+<p>StreamARN -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) for the stream being described.</div></blockquote>
+<p>StreamStatus -&gt; (string)</p>
+<blockquote>
+<div><p>The current status of the stream being described. The stream status is one of the following states:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">CREATING</span></tt> - The stream is being created. Kinesis Data Streams immediately returns and sets <tt class="docutils literal"><span class="pre">StreamStatus</span></tt> to <tt class="docutils literal"><span class="pre">CREATING</span></tt> .</li>
+<li><tt class="docutils literal"><span class="pre">DELETING</span></tt> - The stream is being deleted. The specified stream is in the <tt class="docutils literal"><span class="pre">DELETING</span></tt> state until Kinesis Data Streams completes the deletion.</li>
+<li><tt class="docutils literal"><span class="pre">ACTIVE</span></tt> - The stream exists and is ready for read and write operations or deletion. You should perform read and write operations only on an <tt class="docutils literal"><span class="pre">ACTIVE</span></tt> stream.</li>
+<li><tt class="docutils literal"><span class="pre">UPDATING</span></tt> - Shards in the stream are being merged or split. Read and write operations continue to work while the stream is in the <tt class="docutils literal"><span class="pre">UPDATING</span></tt> state.</li>
+</ul>
+</div></blockquote>
+<p>Shards -&gt; (list)</p>
+<blockquote>
+<div><p>The shards that comprise the stream.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>A uniquely identified group of data records in a Kinesis data stream.</p>
+<p>ShardId -&gt; (string)</p>
+<blockquote>
+<div>The unique identifier of the shard within the stream.</div></blockquote>
+<p>ParentShardId -&gt; (string)</p>
+<blockquote>
+<div>The shard ID of the shard's parent.</div></blockquote>
+<p>AdjacentParentShardId -&gt; (string)</p>
+<blockquote>
+<div>The shard ID of the shard adjacent to the shard's parent.</div></blockquote>
+<p>HashKeyRange -&gt; (structure)</p>
+<blockquote>
+<div><p>The range of possible hash key values for the shard, which is a set of ordered contiguous positive integers.</p>
+<p>StartingHashKey -&gt; (string)</p>
+<blockquote>
+<div>The starting hash key of the hash key range.</div></blockquote>
+<p>EndingHashKey -&gt; (string)</p>
+<blockquote>
+<div>The ending hash key of the hash key range.</div></blockquote>
+</div></blockquote>
+<p>SequenceNumberRange -&gt; (structure)</p>
+<blockquote>
+<div><p>The range of possible sequence numbers for the shard.</p>
+<p>StartingSequenceNumber -&gt; (string)</p>
+<blockquote>
+<div>The starting sequence number for the range.</div></blockquote>
+<p>EndingSequenceNumber -&gt; (string)</p>
+<blockquote>
+<div>The ending sequence number for the range. Shards that are in the OPEN state have an ending sequence number of <tt class="docutils literal"><span class="pre">null</span></tt> .</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>HasMoreShards -&gt; (boolean)</p>
+<blockquote>
+<div>If set to <tt class="docutils literal"><span class="pre">true</span></tt> , more shards in the stream are available to describe.</div></blockquote>
+<p>RetentionPeriodHours -&gt; (integer)</p>
+<blockquote>
+<div>The current retention period, in hours.</div></blockquote>
+<p>StreamCreationTimestamp -&gt; (timestamp)</p>
+<blockquote>
+<div>The approximate time that the stream was created.</div></blockquote>
+<p>EnhancedMonitoring -&gt; (list)</p>
+<blockquote>
+<div><p>Represents the current enhanced monitoring settings of the stream.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Represents enhanced metrics types.</p>
+<p>ShardLevelMetrics -&gt; (list)</p>
+<blockquote>
+<div><p>List of shard-level metrics.</p>
+<p>The following are the valid shard-level metrics. The value "<tt class="docutils literal"><span class="pre">ALL</span></tt> " enhances every metric.</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">IncomingBytes</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">IncomingRecords</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">OutgoingBytes</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">OutgoingRecords</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">WriteProvisionedThroughputExceeded</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">ReadProvisionedThroughputExceeded</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">IteratorAgeMilliseconds</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">ALL</span></tt></li>
+</ul>
+<p>For more information, see <a class="reference external" href="http://docs.aws.amazon.com/kinesis/latest/dev/monitoring-with-cloudwatch.html">Monitoring the Amazon Kinesis Data Streams Service with Amazon CloudWatch</a> in the <em>Amazon Kinesis Data Streams Developer Guide</em> .</p>
+<p>(string)</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>EncryptionType -&gt; (string)</p>
+<blockquote>
+<div><p>The server-side encryption type used on the stream. This parameter can be one of the following values:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">NONE</span></tt> : Do not encrypt the records in the stream.</li>
+<li><tt class="docutils literal"><span class="pre">KMS</span></tt> : Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.</li>
+</ul>
+</div></blockquote>
+<p>KeyId -&gt; (string)</p>
+<blockquote>
+<div><p>The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified ARN to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias <tt class="docutils literal"><span class="pre">aws/kinesis</span></tt> .</p>
+<ul class="simple">
+<li>Key ARN example: <tt class="docutils literal"><span class="pre">arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012</span></tt></li>
+<li>Alias ARN example: <tt class="docutils literal"><span class="pre">arn:aws:kms:us-east-1:123456789012:alias/MyAliasName</span></tt></li>
+<li>Globally unique key ID example: <tt class="docutils literal"><span class="pre">12345678-1234-1234-1234-123456789012</span></tt></li>
+<li>Alias name example: <tt class="docutils literal"><span class="pre">alias/MyAliasName</span></tt></li>
+<li>Master key owned by Kinesis Data Streams: <tt class="docutils literal"><span class="pre">alias/aws/kinesis</span></tt></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>

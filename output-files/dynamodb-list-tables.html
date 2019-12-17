@@ -1,0 +1,14 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>TableNames -&gt; (list)</p>
+<blockquote>
+<div><p>The names of the tables associated with the current account at the current endpoint. The maximum size of this array is 100.</p>
+<p>If <tt class="docutils literal"><span class="pre">LastEvaluatedTableName</span></tt> also appears in the output, you can use this value as the <tt class="docutils literal"><span class="pre">ExclusiveStartTableName</span></tt> parameter in a subsequent <tt class="docutils literal"><span class="pre">ListTables</span></tt> request and obtain the next page of results.</p>
+<p>(string)</p>
+</div></blockquote>
+<p>LastEvaluatedTableName -&gt; (string)</p>
+<blockquote>
+<div><p>The name of the last table in the current page of results. Use this value as the <tt class="docutils literal"><span class="pre">ExclusiveStartTableName</span></tt> in a new request to obtain the next page of results, until all the table names are returned.</p>
+<p>If you do not receive a <tt class="docutils literal"><span class="pre">LastEvaluatedTableName</span></tt> value in the response, this means that there are no more table names to be retrieved.</p>
+</div></blockquote>
+</div>

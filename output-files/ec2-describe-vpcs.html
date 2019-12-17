@@ -1,0 +1,104 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>Vpcs -&gt; (list)</p>
+<blockquote>
+<div><p>Information about one or more VPCs.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Describes a VPC.</p>
+<p>CidrBlock -&gt; (string)</p>
+<blockquote>
+<div>The primary IPv4 CIDR block for the VPC.</div></blockquote>
+<p>DhcpOptionsId -&gt; (string)</p>
+<blockquote>
+<div>The ID of the set of DHCP options you've associated with the VPC (or <tt class="docutils literal"><span class="pre">default</span></tt> if the default options are associated with the VPC).</div></blockquote>
+<p>State -&gt; (string)</p>
+<blockquote>
+<div>The current state of the VPC.</div></blockquote>
+<p>VpcId -&gt; (string)</p>
+<blockquote>
+<div>The ID of the VPC.</div></blockquote>
+<p>OwnerId -&gt; (string)</p>
+<blockquote>
+<div>The ID of the AWS account that owns the VPC.</div></blockquote>
+<p>InstanceTenancy -&gt; (string)</p>
+<blockquote>
+<div>The allowed tenancy of instances launched into the VPC.</div></blockquote>
+<p>Ipv6CidrBlockAssociationSet -&gt; (list)</p>
+<blockquote>
+<div><p>Information about the IPv6 CIDR blocks associated with the VPC.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Describes an IPv6 CIDR block associated with a VPC.</p>
+<p>AssociationId -&gt; (string)</p>
+<blockquote>
+<div>The association ID for the IPv6 CIDR block.</div></blockquote>
+<p>Ipv6CidrBlock -&gt; (string)</p>
+<blockquote>
+<div>The IPv6 CIDR block.</div></blockquote>
+<p>Ipv6CidrBlockState -&gt; (structure)</p>
+<blockquote>
+<div><p>Information about the state of the CIDR block.</p>
+<p>State -&gt; (string)</p>
+<blockquote>
+<div>The state of the CIDR block.</div></blockquote>
+<p>StatusMessage -&gt; (string)</p>
+<blockquote>
+<div>A message about the status of the CIDR block, if applicable.</div></blockquote>
+</div></blockquote>
+<p>NetworkBorderGroup -&gt; (string)</p>
+<blockquote>
+<div>The name of the location from which we advertise the IPV6 CIDR block.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>CidrBlockAssociationSet -&gt; (list)</p>
+<blockquote>
+<div><p>Information about the IPv4 CIDR blocks associated with the VPC.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Describes an IPv4 CIDR block associated with a VPC.</p>
+<p>AssociationId -&gt; (string)</p>
+<blockquote>
+<div>The association ID for the IPv4 CIDR block.</div></blockquote>
+<p>CidrBlock -&gt; (string)</p>
+<blockquote>
+<div>The IPv4 CIDR block.</div></blockquote>
+<p>CidrBlockState -&gt; (structure)</p>
+<blockquote>
+<div><p>Information about the state of the CIDR block.</p>
+<p>State -&gt; (string)</p>
+<blockquote>
+<div>The state of the CIDR block.</div></blockquote>
+<p>StatusMessage -&gt; (string)</p>
+<blockquote>
+<div>A message about the status of the CIDR block, if applicable.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>IsDefault -&gt; (boolean)</p>
+<blockquote>
+<div>Indicates whether the VPC is the default VPC.</div></blockquote>
+<p>Tags -&gt; (list)</p>
+<blockquote>
+<div><p>Any tags assigned to the VPC.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>Describes a tag.</p>
+<p>Key -&gt; (string)</p>
+<blockquote>
+<div><p>The key of the tag.</p>
+<p>Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with <tt class="docutils literal"><span class="pre">aws:</span></tt> .</p>
+</div></blockquote>
+<p>Value -&gt; (string)</p>
+<blockquote>
+<div><p>The value of the tag.</p>
+<p>Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>NextToken -&gt; (string)</p>
+<blockquote>
+<div>The token to use to retrieve the next page of results. This value is <tt class="docutils literal"><span class="pre">null</span></tt> when there are no more results to return.</div></blockquote>
+</div>

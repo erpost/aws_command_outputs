@@ -1,0 +1,157 @@
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">Â¶</a></h2>
+<p>Marker -&gt; (string)</p>
+<blockquote>
+<div>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <tt class="docutils literal"><span class="pre">MaxRecords</span></tt> .</div></blockquote>
+<p>ReplicationInstances -&gt; (list)</p>
+<blockquote>
+<div><p>The replication instances described.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>ReplicationInstanceIdentifier -&gt; (string)</p>
+<blockquote>
+<div><p>The replication instance identifier. This parameter is stored as a lowercase string.</p>
+<p>Constraints:</p>
+<ul class="simple">
+<li>Must contain from 1 to 63 alphanumeric characters or hyphens.</li>
+<li>First character must be a letter.</li>
+<li>Cannot end with a hyphen or contain two consecutive hyphens.</li>
+</ul>
+<p>Example: <tt class="docutils literal"><span class="pre">myrepinstance</span></tt></p>
+</div></blockquote>
+<p>ReplicationInstanceClass -&gt; (string)</p>
+<blockquote>
+<div><p>The compute and memory capacity of the replication instance.</p>
+<p>Valid Values: <tt class="docutils literal"><span class="pre">dms.t2.micro</span> <span class="pre">|</span> <span class="pre">dms.t2.small</span> <span class="pre">|</span> <span class="pre">dms.t2.medium</span> <span class="pre">|</span> <span class="pre">dms.t2.large</span> <span class="pre">|</span> <span class="pre">dms.c4.large</span> <span class="pre">|</span> <span class="pre">dms.c4.xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.2xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.4xlarge</span></tt></p>
+</div></blockquote>
+<p>ReplicationInstanceStatus -&gt; (string)</p>
+<blockquote>
+<div>The status of the replication instance.</div></blockquote>
+<p>AllocatedStorage -&gt; (integer)</p>
+<blockquote>
+<div>The amount of storage (in gigabytes) that is allocated for the replication instance.</div></blockquote>
+<p>InstanceCreateTime -&gt; (timestamp)</p>
+<blockquote>
+<div>The time the replication instance was created.</div></blockquote>
+<p>VpcSecurityGroups -&gt; (list)</p>
+<blockquote>
+<div><p>The VPC security group for the instance.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>VpcSecurityGroupId -&gt; (string)</p>
+<blockquote>
+<div>The VPC security group Id.</div></blockquote>
+<p>Status -&gt; (string)</p>
+<blockquote>
+<div>The status of the VPC security group.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>AvailabilityZone -&gt; (string)</p>
+<blockquote>
+<div>The Availability Zone for the instance.</div></blockquote>
+<p>ReplicationSubnetGroup -&gt; (structure)</p>
+<blockquote>
+<div><p>The subnet group for the replication instance.</p>
+<p>ReplicationSubnetGroupIdentifier -&gt; (string)</p>
+<blockquote>
+<div>The identifier of the replication instance subnet group.</div></blockquote>
+<p>ReplicationSubnetGroupDescription -&gt; (string)</p>
+<blockquote>
+<div>A description for the replication subnet group.</div></blockquote>
+<p>VpcId -&gt; (string)</p>
+<blockquote>
+<div>The ID of the VPC.</div></blockquote>
+<p>SubnetGroupStatus -&gt; (string)</p>
+<blockquote>
+<div>The status of the subnet group.</div></blockquote>
+<p>Subnets -&gt; (list)</p>
+<blockquote>
+<div><p>The subnets that are in the subnet group.</p>
+<p>(structure)</p>
+<blockquote>
+<div><p>SubnetIdentifier -&gt; (string)</p>
+<blockquote>
+<div>The subnet identifier.</div></blockquote>
+<p>SubnetAvailabilityZone -&gt; (structure)</p>
+<blockquote>
+<div><p>The Availability Zone of the subnet.</p>
+<p>Name -&gt; (string)</p>
+<blockquote>
+<div>The name of the availability zone.</div></blockquote>
+</div></blockquote>
+<p>SubnetStatus -&gt; (string)</p>
+<blockquote>
+<div>The status of the subnet.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>PreferredMaintenanceWindow -&gt; (string)</p>
+<blockquote>
+<div>The maintenance window times for the replication instance.</div></blockquote>
+<p>PendingModifiedValues -&gt; (structure)</p>
+<blockquote>
+<div><p>The pending modification values.</p>
+<p>ReplicationInstanceClass -&gt; (string)</p>
+<blockquote>
+<div><p>The compute and memory capacity of the replication instance.</p>
+<p>Valid Values: <tt class="docutils literal"><span class="pre">dms.t2.micro</span> <span class="pre">|</span> <span class="pre">dms.t2.small</span> <span class="pre">|</span> <span class="pre">dms.t2.medium</span> <span class="pre">|</span> <span class="pre">dms.t2.large</span> <span class="pre">|</span> <span class="pre">dms.c4.large</span> <span class="pre">|</span> <span class="pre">dms.c4.xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.2xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.4xlarge</span></tt></p>
+</div></blockquote>
+<p>AllocatedStorage -&gt; (integer)</p>
+<blockquote>
+<div>The amount of storage (in gigabytes) that is allocated for the replication instance.</div></blockquote>
+<p>MultiAZ -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether the replication instance is a Multi-AZ deployment. You cannot set the <tt class="docutils literal"><span class="pre">AvailabilityZone</span></tt> parameter if the Multi-AZ parameter is set to <tt class="docutils literal"><span class="pre">true</span></tt> .</div></blockquote>
+<p>EngineVersion -&gt; (string)</p>
+<blockquote>
+<div>The engine version number of the replication instance.</div></blockquote>
+</div></blockquote>
+<p>MultiAZ -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies whether the replication instance is a Multi-AZ deployment. You cannot set the <tt class="docutils literal"><span class="pre">AvailabilityZone</span></tt> parameter if the Multi-AZ parameter is set to <tt class="docutils literal"><span class="pre">true</span></tt> .</div></blockquote>
+<p>EngineVersion -&gt; (string)</p>
+<blockquote>
+<div>The engine version number of the replication instance.</div></blockquote>
+<p>AutoMinorVersionUpgrade -&gt; (boolean)</p>
+<blockquote>
+<div>Boolean value indicating if minor version upgrades will be automatically applied to the instance.</div></blockquote>
+<p>KmsKeyId -&gt; (string)</p>
+<blockquote>
+<div><p>An AWS KMS key identifier that is used to encrypt the data on the replication instance.</p>
+<p>If you don't specify a value for the <tt class="docutils literal"><span class="pre">KmsKeyId</span></tt> parameter, then AWS DMS uses your default encryption key.</p>
+<p>AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS Region.</p>
+</div></blockquote>
+<p>ReplicationInstanceArn -&gt; (string)</p>
+<blockquote>
+<div>The Amazon Resource Name (ARN) of the replication instance.</div></blockquote>
+<p>ReplicationInstancePublicIpAddress -&gt; (string)</p>
+<blockquote>
+<div>The public IP address of the replication instance.</div></blockquote>
+<p>ReplicationInstancePrivateIpAddress -&gt; (string)</p>
+<blockquote>
+<div>The private IP address of the replication instance.</div></blockquote>
+<p>ReplicationInstancePublicIpAddresses -&gt; (list)</p>
+<blockquote>
+<div><p>One or more public IP addresses for the replication instance.</p>
+<p>(string)</p>
+</div></blockquote>
+<p>ReplicationInstancePrivateIpAddresses -&gt; (list)</p>
+<blockquote>
+<div><p>One or more private IP addresses for the replication instance.</p>
+<p>(string)</p>
+</div></blockquote>
+<p>PubliclyAccessible -&gt; (boolean)</p>
+<blockquote>
+<div>Specifies the accessibility options for the replication instance. A value of <tt class="docutils literal"><span class="pre">true</span></tt> represents an instance with a public IP address. A value of <tt class="docutils literal"><span class="pre">false</span></tt> represents an instance with a private IP address. The default value is <tt class="docutils literal"><span class="pre">true</span></tt> .</div></blockquote>
+<p>SecondaryAvailabilityZone -&gt; (string)</p>
+<blockquote>
+<div>The availability zone of the standby replication instance in a Multi-AZ deployment.</div></blockquote>
+<p>FreeUntil -&gt; (timestamp)</p>
+<blockquote>
+<div>The expiration date of the free replication instance that is part of the Free DMS program.</div></blockquote>
+<p>DnsNameServers -&gt; (string)</p>
+<blockquote>
+<div>The DNS name servers for the replication instance.</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
